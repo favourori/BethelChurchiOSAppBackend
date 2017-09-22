@@ -1,6 +1,10 @@
 # Admin Backend for Bethel iOS app
-Backend app designed with JavaFx
+Developed in Java.
 
+SCREENSHOT:
+
+
+![](screenshot/admin.png?raw=true "Light Theme")
 
 
 
