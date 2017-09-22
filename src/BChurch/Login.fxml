@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="579.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BChurch.LoginController">
+   <children>
+      <AnchorPane layoutX="210.0" prefHeight="312.0" prefWidth="386.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <JFXTextField fx:id="id" focusColor="#bf2323" layoutX="41.0" layoutY="115.0" prefHeight="25.0" prefWidth="289.0" promptText="username" unFocusColor="#120a5a" />
+            <JFXPasswordField fx:id="password" focusColor="#bf2323" layoutX="41.0" layoutY="163.0" prefHeight="25.0" prefWidth="289.0" promptText="Password" unFocusColor="#120a5a" />
+            <JFXButton graphicTextGap="0.0" layoutX="128.0" layoutY="223.0" onAction="#login" prefHeight="37.0" prefWidth="115.0" style="-fx-background-color: #120a5a;" text="Login" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="46.0" layoutX="163.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/accnt.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="96.0" prefHeight="25.0" prefWidth="218.0" textAlignment="CENTER" textFill="#a41414" wrapText="true">
+               <font>
+                  <Font name="Poppins" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="81.0" fitWidth="74.0" layoutX="71.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="55.0" layoutY="182.0" text=" BETHEL CHURCH" textFill="#b5aeae">
+         <font>
+            <Font name="Poppins" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="205.0" text="MAGNOLIA" textFill="#b5aeae">
+         <font>
+            <Font name="Poppins" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

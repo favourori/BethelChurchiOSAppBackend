@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BChurch.SermonController">
+   <children>
+      <JFXTreeTableView layoutX="10.0" layoutY="311.0" prefHeight="298.0" prefWidth="717.0" style="-fx-background-color: white;" />
+      <JFXTextField layoutX="11.0" layoutY="17.0" prefHeight="25.0" prefWidth="421.0" promptText="INPUT A KEYWORD" />
+      <JFXButton fx:id="addNew" layoutX="442.0" layoutY="14.0" onAction="#addNew" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #00796B;" text="ADD NEW" textFill="WHITE" />
+      <JFXButton layoutX="538.0" layoutY="14.0" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #039BE5;" text="EDIT" textFill="WHITE" />
+      <JFXButton layoutX="634.0" layoutY="14.0" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #e53935;" text="DELETE" textFill="WHITE" />
+      <Separator layoutY="59.0" opacity="0.61" prefHeight="2.0" prefWidth="733.0" />
+      <AnchorPane layoutX="10.0" layoutY="71.0" prefHeight="32.0" prefWidth="717.0" style="-fx-background-color: #00796B;">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" text="ADD | EDIT | DELETE - SERMONS" textFill="WHITE">
+               <font>
+                  <Font name="Poppins" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="valLabel" layoutX="495.0" layoutY="5.0" prefHeight="17.0" prefWidth="179.0" textFill="WHITE">
+               <font>
+                  <Font name="Poppins" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="statusIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@images/warning.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addNewPanel" disable="true" layoutX="10.0" layoutY="103.0" prefHeight="201.0" prefWidth="717.0" style="-fx-border-color: #00796B; -fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" text="ADD | EDIT | DELETE" textFill="WHITE">
+               <font>
+                  <Font name="Poppins" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="title" focusColor="#00796b" layoutX="14.0" layoutY="16.0" prefHeight="25.0" prefWidth="328.0" promptText="TITLE" />
+            <JFXTextArea fx:id="desc" focusColor="#00796b" layoutX="14.0" layoutY="68.0" prefHeight="23.0" prefWidth="328.0" promptText="DESCRIPTION" />
+            <JFXTextField fx:id="pastor" focusColor="#00796b" layoutX="402.0" layoutY="16.0" prefHeight="25.0" prefWidth="304.0" promptText="PASTOR" />
+            <JFXDatePicker fx:id="date" layoutX="402.0" layoutY="76.0" prefHeight="28.0" prefWidth="304.0" promptText="SELECT DATE" />
+            <JFXTextField fx:id="file" focusColor="#00796b" layoutX="14.0" layoutY="160.0" prefHeight="25.0" prefWidth="215.0" promptText="AUDIO/VIDEO" />
+            <JFXButton layoutX="245.0" layoutY="120.0" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #039BE5;" text="CHOOSE" textFill="WHITE" />
+            <JFXButton layoutX="572.0" layoutY="141.0" onAction="#uploadSermon" prefHeight="32.0" prefWidth="134.0" style="-fx-background-color: #00796B;" text="UPLOAD" textFill="WHITE" />
+            <JFXButton layoutX="402.0" layoutY="141.0" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #e53935;" text="CLEAR" textFill="WHITE" />
+            <JFXTextField fx:id="file1" focusColor="#00796b" layoutX="14.0" layoutY="120.0" prefHeight="25.0" prefWidth="215.0" promptText="PICTURE" />
+            <JFXButton layoutX="245.0" layoutY="160.0" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #e53935;" text="CHOOSE" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
